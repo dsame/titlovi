@@ -17,7 +17,7 @@ ffmpeg -i  ~/video.mp4 -map 0:1 -ac 1 -ar 16000 -c:a pcm_s16le audio.wav
 # -l hr|sr - croatian or serbian
 # -mc 0 | previous tokens to remember ~ try to change for better results
 
-time ./main -m ./whisper.cpp/models/ggml-large-v3.bin audio.wav -ml 42 -l hr  -sow -pp  -mc 0 -osrt -of titlove.srt
+time ./main -m ./whisper.cpp/models/ggml-large-v3.bin audio.wav -ml 42 -l hr  -sow -pp  -mc 0 -osrt -of titlove
 ```
 
 lat2cyr.py
