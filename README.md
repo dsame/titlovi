@@ -20,6 +20,10 @@ ffmpeg -i  ~/video.mp4 -map 0:1 -ac 1 -ar 16000 -c:a pcm_s16le audio.wav
 time ./main -m ./whisper.cpp/models/ggml-large-v3.bin audio.wav -ml 42 -l hr  -sow -pp  -mc 0 -osrt -of titlove
 ```
 
+```
+ffmpeg -i video.mp4 -i titlovi.sr.srt -i titlovi.sr-lat.srt -map 0 -map 1 -map 2 -vcodec copy -acodec copy -c:s:0 mov_text -c:s:1 mov_text -metadata:s:s:0 language=SR -metadata:s:s:0 handler_name=Srpski_Cyr -metadata:s:s:0 title=Српски -metadata:s:s:1 language=SR_LAT -metadata:s:s:1 handler_name=Srpski_Lat -metadata:s:s:1 title=video_sa_tilovima.mp4
+```
+
 lat2cyr.py
 ```
 import sys
