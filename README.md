@@ -10,7 +10,7 @@
 ffmpeg -i  ~/video.mp4 -map 0:1 -ac 1 -ar 16000 -c:a pcm_s16le audio.wav
 ```
 
-Препознај текст из аудио снимка помоћу whisper.cpp
+Препознај текст из аудио снимка помоћу [whisper.cpp](https://github.com/ggerganov/whisper.cpp)
 ```bash
 # -ml - max length in letters
 # -sow - split by words
